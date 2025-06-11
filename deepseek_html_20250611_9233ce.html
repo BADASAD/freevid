@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeTube - YouTube Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header">
+        <div class="logo-container">
+            <i class="fas fa-bars menu-toggle"></i>
+            <div class="logo">
+                <i class="fab fa-youtube"></i>
+                <span>FreeTube</span>
+            </div>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" placeholder="Search" class="search-input">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <button class="voice-search-btn"><i class="fas fa-microphone"></i></button>
+        </div>
+        
+        <div class="user-actions">
+            <button class="upload-btn"><i class="fas fa-video"></i></button>
+            <button class="apps-btn"><i class="fas fa-th"></i></button>
+            <button class="notifications-btn"><i class="fas fa-bell"></i></button>
+            <div class="user-avatar">U</div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </div>
+        <div class="sidebar-item">
+            <i class="fas fa-compass"></i>
+            <span>Explore</span>
+        </div>
+        <div class="sidebar-item">
+            <i class="fas fa-play-circle"></i>
+            <span>Shorts</span>
+        </div>
+        <div class="sidebar-item">
+            <i class="fas fa-subscription"></i>
+            <span>Subscriptions</span>
+        </div>
+        <hr>
+        <div class="sidebar-item">
+            <i class="fas fa-video"></i>
+            <span>Library</span>
+        </div>
+        <div class="sidebar-item">
+            <i class="fas fa-history"></i>
+            <span>History</span>
+        </div>
+        <div class="sidebar-item">
+            <i class="fas fa-clock"></i>
+            <span>Watch Later</span>
+        </div>
+        <div class="sidebar-item">
+            <i class="fas fa-thumbs-up"></i>
+            <span>Liked Videos</span>
+        </div>
+        <hr>
+        <h3 class="sidebar-title">Subscriptions</h3>
+        <div class="sidebar-item">
+            <div class="channel-avatar">C</div>
+            <span>Channel 1</span>
+        </div>
+        <div class="sidebar-item">
+            <div class="channel-avatar">T</div>
+            <span>Tech Channel</span>
+        </div>
+        <div class="sidebar-item">
+            <div class="channel-avatar">M</div>
+            <span>Music Channel</span>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        <!-- Categories -->
+        <div class="categories">
+            <button class="category active">All</button>
+            <button class="category">Music</button>
+            <button class="category">Gaming</button>
+            <button class="category">Live</button>
+            <button class="category">Programming</button>
+            <button class="category">Comedy</button>
+            <button class="category">Podcasts</button>
+            <button class="category">Recently uploaded</button>
+            <button class="category">Watched</button>
+            <button class="category">New to you</button>
+        </div>
+
+        <!-- Videos Grid -->
+        <div class="videos-grid">
+            <!-- Video Card 1 -->
+            <div class="video-card">
+                <div class="thumbnail-container">
+                    <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video thumbnail" class="thumbnail">
+                    <span class="duration">10:30</span>
+                </div>
+                <div class="video-details">
+                    <div class="channel-avatar">C</div>
+                    <div class="video-info">
+                        <h3 class="video-title">How to build a YouTube clone with HTML, CSS, JS</h3>
+                        <p class="channel-name">Coding Tutorials</p>
+                        <p class="video-stats">120K views • 2 days ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Card 2 -->
+            <div class="video-card">
+                <div class="thumbnail-container">
+                    <img src="https://i.ytimg.com/vi/PkZNo7MFNFg/hqdefault.jpg" alt="Video thumbnail" class="thumbnail">
+                    <span class="duration">5:45</span>
+                </div>
+                <div class="video-details">
+                    <div class="channel-avatar">W</div>
+                    <div class="video-info">
+                        <h3 class="video-title">Learn JavaScript in 5 Minutes</h3>
+                        <p class="channel-name">Web Dev Simplified</p>
+                        <p class="video-stats">450K views • 1 week ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more video cards as needed -->
+        </div>
+    </main>
+
+    <!-- Video Player Modal (Hidden by default) -->
+    <div class="video-player-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="video-container">
+                <video controls class="main-video">
+                    <source src="video-sample.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-info-modal">
+                <h2 class="video-title-modal">How to build a YouTube clone with HTML, CSS, JS</h2>
+                <div class="video-actions">
+                    <div class="video-stats-modal">
+                        <span>120,345 views</span>
+                        <span>•</span>
+                        <span>Jun 12, 2023</span>
+                    </div>
+                    <div class="action-buttons">
+                        <button class="like-btn"><i class="fas fa-thumbs-up"></i> 12K</button>
+                        <button class="dislike-btn"><i class="fas fa-thumbs-down"></i></button>
+                        <button class="share-btn"><i class="fas fa-share"></i> Share</button>
+                        <button class="save-btn"><i class="fas fa-plus"></i> Save</button>
+                    </div>
+                </div>
+                <hr>
+                <div class="channel-info">
+                    <div class="channel-avatar-modal">C</div>
+                    <div class="channel-details">
+                        <h3 class="channel-name-modal">Coding Tutorials</h3>
+                        <p class="subscribers">1.2M subscribers</p>
+                    </div>
+                    <button class="subscribe-btn">Subscribe</button>
+                </div>
+                <div class="video-description">
+                    <p>In this tutorial, we'll build a YouTube clone called FreeTube using HTML, CSS, and JavaScript. Learn how to create responsive layouts, video grids, and interactive elements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
